@@ -123,7 +123,9 @@ function ListCard(el) {
             el._title = ptitle;
             $title.data('parsed-title', ptitle);
             // $title[0].innerText = ptitle;
-            $title[0].childNodes[1].textContent = ptitle;
+            if ($title[0].childNodes[1]) {
+              $title[0].childNodes[1].textContent = ptitle;
+            }
 
             setColor($card, label[1]);
 
